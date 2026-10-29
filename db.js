@@ -22,7 +22,7 @@
    Until these are filled in, order logging is silently skipped and the
    WhatsApp order still works normally.
 --------------------------------------------------------- */
-const SUPABASE_URL = "https://vmukppuulhjhgtzewlja.supabase.co/rest/v1/"; // <-- replace
+const SUPABASE_URL = "https://vmukppuulhjhgtzewlja.supabase.co"; // <-- replace
 const SUPABASE_ANON_KEY = "sb_publishable_T2uj5lRowF-slB2ftg1hdw_y8eYA4Wu"; // <-- replace
 
 let _supabaseClient = null;
