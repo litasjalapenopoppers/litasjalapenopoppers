@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-i18n-page-title="home_title">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lita's Jalapeño Poppers — Independence Village, Belize</title>
+<meta name="description" data-i18n-meta="home_desc" content="Homemade jalapeño poppers, food, drinks and shakes in Independence Village, Belize. Order for pickup on WhatsApp.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- First-visit language picker -->
+<div class="lang-modal-overlay" data-lang-modal>
+  <div class="lang-modal-box">
+    <h2 data-i18n="lang_modal_heading">Choose your language</h2>
+    <p data-i18n="lang_modal_sub">You can change this anytime from the menu bar.</p>
+    <div class="lang-modal-choices">
+      <button type="button" data-lang-choose="en">English</button>
+      <button type="button" data-lang-choose="es">Español</button>
+    </div>
+  </div>
+</div>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.png" srcset="assets/logo.png 1x, assets/logo@2x.png 2x"
+           alt="Lita's Jalapeño Poppers" width="160" height="147">
+      <span class="brand-tagline" data-i18n="brand_tagline">Independence Village, Belize</span>
+    </a>
+    <button class="nav-toggle" data-nav-toggle aria-expanded="false" data-i18n-aria-label="nav_toggle_label" aria-label="Open menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="#2B1D14" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <ul class="nav-links" data-nav-links>
+      <li><a href="index.html" aria-current="page" data-i18n="nav_home">Home</a></li>
+      <li><a href="menu.html" data-i18n="nav_menu">Menu</a></li>
+      <li><a href="about.html" data-i18n="nav_about">About Us</a></li>
+      <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="lang-switch">
+        <button type="button" data-lang-option="en">EN</button>
+        <button type="button" data-lang-option="es">ES</button>
+      </div>
+      <button class="cart-btn" data-open-cart data-i18n-aria-label="cart_open_label" aria-label="Open cart">
+        <span data-i18n="cart_word">Cart</span> <span class="cart-count" data-cart-count>0</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow-note" data-i18n="hero_eyebrow">Independence Village, Belize · Family-run since 2016</div>
+      <h1 data-i18n="hero_h1">Ten years of stuffing peppers right.</h1>
+      <p data-i18n="hero_p">What started as jalapeño poppers on a tray has grown into a full menu of food, drinks and shakes — made fresh and ready for pickup, right here in Independence Village.</p>
+      <div class="hero-actions">
+        <a href="menu.html" class="btn btn-primary" data-i18n="hero_cta_menu">View the menu</a>
+        <a href="contact.html" class="btn btn-outline" data-i18n="hero_cta_find">Find us</a>
+      </div>
+    </div>
+    <div class="photo-stack" aria-hidden="false">
+      <figure class="photo-card c1">
+        <div class="frame"><img src="assets/photos/hero-poppers-basket.jpg" alt="A basket of Lita's Jalapeño Poppers" loading="lazy"></div>
+        <figcaption data-i18n="photo_caption_1">Fresh out of the fryer</figcaption>
+      </figure>
+      <figure class="photo-card c2">
+        <div class="frame"><img src="assets/photos/hero-burger.jpg" alt="Lita's signature burger with fries" loading="lazy"></div>
+        <figcaption data-i18n="photo_caption_2">Shakes made to order</figcaption>
+      </figure>
+    </div>
+  </div>
+</header>
+
+<section class="category-strip">
+  <div class="wrap">
+    <h2 data-i18n="category_heading">On the menu</h2>
+    <ul class="category-list">
+      <li>
+        <span class="cat-name" data-i18n="cat_poppers_short">Poppers</span>
+        <span class="cat-desc" data-i18n="cat_poppers_desc">Eight flavors made fresh to order.</span>
+      </li>
+      <li>
+        <span class="cat-name" data-i18n="cat_food_short">Food</span>
+        <span class="cat-desc" data-i18n="cat_food_desc">Burgers, wings, quesadillas, nachos and more.</span>
+      </li>
+      <li>
+        <span class="cat-name" data-i18n="cat_drinks_short">Drinks &amp; Shakes</span>
+        <span class="cat-desc" data-i18n="cat_drinks_desc">Fresh juices, milk shakes and cold sodas.</span>
+      </li>
+      <li>
+        <span class="cat-name" data-i18n="cat_wholesale_short">Wholesale</span>
+        <span class="cat-desc" data-i18n="cat_wholesale_desc">Frozen poppers by the pack.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap">
+    <div class="stat">10<span data-i18n="story_stat_label">years in the village</span></div>
+    <div>
+      <h2 data-i18n="story_h2_home">Still family-run, still local.</h2>
+      <p data-i18n="story_p_home">Lita's has been serving Independence Village for a decade — starting with a simple batch of jalapeño poppers and growing, one order at a time, into a full menu that neighbors and visitors come back for. Every order is made fresh, and every customer is treated like family.</p>
+      <a href="about.html" class="btn btn-outline" data-i18n="story_cta">Read our story</a>
+    </div>
+  </div>
+</section>
+
+<section class="category-strip" style="border-bottom:none;">
+  <div class="wrap" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px;">
+    <div>
+      <h2 style="margin-bottom:6px;" data-i18n="cta_heading">Ready to order?</h2>
+      <p style="margin:0;" data-i18n="cta_p">Build your order on the Menu page, then send it straight to us on WhatsApp — we'll confirm your pickup time.</p>
+    </div>
+    <a href="menu.html" class="btn btn-whatsapp" data-i18n="cta_button">Order on WhatsApp</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <h3>Lita's Jalapeño Poppers</h3>
+      <p style="max-width:36ch;" data-i18n="footer_tagline">Homemade poppers, food, drinks and shakes in Independence Village, Belize.</p>
+    </div>
+    <div>
+      <h3 data-i18n="footer_visit">Visit</h3>
+      <p data-i18n="footer_address">Independence Village, Belize</p>
+    </div>
+    <div>
+      <h3 data-i18n="footer_contact_heading">Get in touch</h3>
+      <p><a href="contact.html" data-i18n="footer_link_contact">Contact & hours</a></p>
+      <p><a href="menu.html" data-i18n="footer_link_order">Order on WhatsApp</a></p>
+    </div>
+  </div>
+  <div class="wrap fine-print">© <span id="year"></span> Lita's Jalapeño Poppers. <span data-i18n="footer_copyright">All rights reserved.</span></div>
+</footer>
+
+<!-- Cart drawer (shared across pages) -->
+<div class="cart-overlay" data-cart-overlay></div>
+<aside class="cart-drawer" data-cart-drawer aria-label="Your order">
+  <div class="cart-head">
+    <h2 data-i18n="cart_drawer_heading">Your order</h2>
+    <button class="close-cart" data-close-cart data-i18n-aria-label="cart_close_label" aria-label="Close cart">×</button>
+  </div>
+  <div class="cart-body" data-cart-body></div>
+  <div class="cart-foot">
+    <div class="cart-total-row"><span data-i18n="cart_total_label">Total</span><span data-cart-total>$0.00</span></div>
+    <label for="order-name" data-i18n="cart_name_label">Your name</label>
+    <input type="text" id="order-name" data-order-name data-i18n-placeholder="cart_name_placeholder" placeholder="e.g. Maria">
+    <label data-i18n="cart_fulfillment_label">Pickup or delivery?</label>
+    <div class="pickup-choice">
+      <label><input type="radio" name="fulfillment" value="pickup" checked> <span data-i18n="cart_pickup">Pickup</span></label>
+      <label><input type="radio" name="fulfillment" value="delivery"> <span data-i18n="cart_delivery">Delivery</span></label>
+    </div>
+    <label for="order-notes" data-i18n="cart_notes_label">Notes (optional)</label>
+    <textarea id="order-notes" data-order-notes rows="2" data-i18n-placeholder="cart_notes_placeholder" placeholder="e.g. extra spicy, no bacon"></textarea>
+    <button class="btn btn-whatsapp order-btn" data-whatsapp-order data-i18n="cart_send_button">Send order on WhatsApp</button>
+  </div>
+</aside>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="db.js"></script>
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

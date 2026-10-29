@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" data-i18n-page-title="menu_title">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu — Lita's Jalapeño Poppers</title>
+<meta name="description" data-i18n-meta="menu_desc" content="Poppers, food, drinks, shakes and wholesale packs — browse the full menu and order on WhatsApp.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="lang-modal-overlay" data-lang-modal>
+  <div class="lang-modal-box">
+    <h2 data-i18n="lang_modal_heading">Choose your language</h2>
+    <p data-i18n="lang_modal_sub">You can change this anytime from the menu bar.</p>
+    <div class="lang-modal-choices">
+      <button type="button" data-lang-choose="en">English</button>
+      <button type="button" data-lang-choose="es">Español</button>
+    </div>
+  </div>
+</div>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.png" srcset="assets/logo.png 1x, assets/logo@2x.png 2x"
+           alt="Lita's Jalapeño Poppers" width="160" height="147">
+      <span class="brand-tagline" data-i18n="brand_tagline">Independence Village, Belize</span>
+    </a>
+    <button class="nav-toggle" data-nav-toggle aria-expanded="false" data-i18n-aria-label="nav_toggle_label" aria-label="Open menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="#2B1D14" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <ul class="nav-links" data-nav-links>
+      <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+      <li><a href="menu.html" aria-current="page" data-i18n="nav_menu">Menu</a></li>
+      <li><a href="about.html" data-i18n="nav_about">About Us</a></li>
+      <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="lang-switch">
+        <button type="button" data-lang-option="en">EN</button>
+        <button type="button" data-lang-option="es">ES</button>
+      </div>
+      <button class="cart-btn" data-open-cart data-i18n-aria-label="cart_open_label" aria-label="Open cart">
+        <span data-i18n="cart_word">Cart</span> <span class="cart-count" data-cart-count>0</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="wrap">
+    <div class="eyebrow-note" data-i18n="menu_page_eyebrow">Prices in BZD</div>
+    <h1 data-i18n="menu_page_h1">Full menu</h1>
+    <p data-i18n="menu_page_p">Add what you'd like, then send your order straight to us on WhatsApp.</p>
+  </div>
+</header>
+
+<main class="menu-layout">
+  <div class="wrap">
+    <div class="filter-tabs" data-filter-tabs></div>
+    <div data-menu-groups></div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <h3>Lita's Jalapeño Poppers</h3>
+      <p style="max-width:36ch;" data-i18n="footer_tagline">Homemade poppers, food, drinks and shakes in Independence Village, Belize.</p>
+    </div>
+    <div>
+      <h3 data-i18n="footer_visit">Visit</h3>
+      <p data-i18n="footer_address">Independence Village, Belize</p>
+    </div>
+    <div>
+      <h3 data-i18n="footer_contact_heading">Get in touch</h3>
+      <p><a href="contact.html" data-i18n="footer_link_contact">Contact & hours</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="cart-overlay" data-cart-overlay></div>
+<aside class="cart-drawer" data-cart-drawer aria-label="Your order">
+  <div class="cart-head">
+    <h2 data-i18n="cart_drawer_heading">Your order</h2>
+    <button class="close-cart" data-close-cart data-i18n-aria-label="cart_close_label" aria-label="Close cart">×</button>
+  </div>
+  <div class="cart-body" data-cart-body></div>
+  <div class="cart-foot">
+    <div class="cart-total-row"><span data-i18n="cart_total_label">Total</span><span data-cart-total>$0.00</span></div>
+    <label for="order-name" data-i18n="cart_name_label">Your name</label>
+    <input type="text" id="order-name" data-order-name data-i18n-placeholder="cart_name_placeholder" placeholder="e.g. Maria">
+    <label data-i18n="cart_fulfillment_label">Pickup or delivery?</label>
+    <div class="pickup-choice">
+      <label><input type="radio" name="fulfillment" value="pickup" checked> <span data-i18n="cart_pickup">Pickup</span></label>
+      <label><input type="radio" name="fulfillment" value="delivery"> <span data-i18n="cart_delivery">Delivery</span></label>
+    </div>
+    <label for="order-notes" data-i18n="cart_notes_label">Notes (optional)</label>
+    <textarea id="order-notes" data-order-notes rows="2" data-i18n-placeholder="cart_notes_placeholder" placeholder="e.g. extra spicy, no bacon"></textarea>
+    <button class="btn btn-whatsapp order-btn" data-whatsapp-order data-i18n="cart_send_button">Send order on WhatsApp</button>
+  </div>
+</aside>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="db.js"></script>
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+<script>
+  const tabsEl = document.querySelector("[data-filter-tabs]");
+  const groupsEl = document.querySelector("[data-menu-groups]");
+
+  function renderFilterTabs() {
+    const current = tabsEl.querySelector("button.active")?.dataset.filter || "all";
+    tabsEl.innerHTML = `<button data-filter="all">${t("filter_all")}</button>` +
+      CATEGORY_ORDER.map((cat) => `<button data-filter="${cat}">${categoryLabel(cat)}</button>`).join("");
+    tabsEl.querySelectorAll("button").forEach((btn) => {
+      btn.classList.toggle("active", btn.dataset.filter === current);
+      btn.addEventListener("click", () => {
+        tabsEl.querySelectorAll("button").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        renderMenu(btn.dataset.filter);
+      });
+    });
+  }
+
+  function readSelections(id) {
+    const sel = {};
+    groupsEl.querySelectorAll(`select[data-opt-item="${id}"]`).forEach((s) => {
+      sel[s.dataset.optGroup] = s.value;
+    });
+    return sel;
+  }
+
+  function renderMenu(filter) {
+    const cats = CATEGORY_ORDER.filter((c) => filter === "all" || c === filter);
+    groupsEl.innerHTML = cats.map((cat) => `
+      <div class="menu-group">
+        <h2>${categoryLabel(cat)}</h2>
+        ${MENU_STRUCTURE[cat].map((id) => {
+          const name = t(`item_${id}_name`);
+          const desc = t(`item_${id}_desc`);
+          const groupsForItem = itemOptionGroups(id);
+          const basePrice = itemPriceWithSelections(id, defaultSelections(id));
+          const optionsHtml = groupsForItem.length ? `
+            <div class="item-options">
+              ${groupsForItem.map((groupId) => `
+                <label class="opt-group">
+                  <span>${t(`opt_${groupId}_label`)}</span>
+                  <span class="select-wrap">
+                    <select data-opt-item="${id}" data-opt-group="${groupId}">
+                      ${OPTION_GROUPS[groupId].choices.map((c) => `<option value="${c.id}">${t(`opt_${groupId}_${c.id}`)}</option>`).join("")}
+                    </select>
+                  </span>
+                </label>
+              `).join("")}
+            </div>` : "";
+          return `
+          <div class="menu-item">
+            <div>
+              <div class="name">${name}</div>
+              ${desc ? `<div class="desc">${desc}</div>` : ""}
+              ${optionsHtml}
+            </div>
+            <div class="price" data-price="${id}">$${basePrice.toFixed(2)}</div>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div class="qty-row">
+                <button type="button" data-step="-1" data-id="${id}" aria-label="${t("qty_decrease_label")}">−</button>
+                <span class="qty-val" data-qty="${id}">1</span>
+                <button type="button" data-step="1" data-id="${id}" aria-label="${t("qty_increase_label")}">+</button>
+              </div>
+              <button type="button" class="add-btn" data-add="${id}">${t("add_button")}</button>
+            </div>
+          </div>`;
+        }).join("")}
+      </div>
+    `).join("");
+
+    groupsEl.querySelectorAll("[data-step]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const id = btn.dataset.id;
+        const span = groupsEl.querySelector(`[data-qty="${id}"]`);
+        let val = parseInt(span.textContent, 10) + parseInt(btn.dataset.step, 10);
+        if (val < 1) val = 1;
+        span.textContent = val;
+      });
+    });
+    groupsEl.querySelectorAll("select[data-opt-item]").forEach((sel) => {
+      sel.addEventListener("change", () => {
+        const id = sel.dataset.optItem;
+        const priceEl = groupsEl.querySelector(`[data-price="${id}"]`);
+        if (priceEl) priceEl.textContent = "$" + itemPriceWithSelections(id, readSelections(id)).toFixed(2);
+      });
+    });
+    groupsEl.querySelectorAll("[data-add]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const id = btn.dataset.add;
+        const span = groupsEl.querySelector(`[data-qty="${id}"]`);
+        const qty = parseInt(span.textContent, 10);
+        const selections = readSelections(id);
+        addToCart(id, selections, qty);
+        span.textContent = 1;
+        btn.textContent = t("added_button");
+        setTimeout(() => (btn.textContent = t("add_button")), 900);
+      });
+    });
+  }
+
+  renderFilterTabs();
+  renderMenu("all");
+</script>
+</body>
+</html>
