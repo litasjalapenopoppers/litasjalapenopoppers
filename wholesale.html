@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" data-i18n-page-title="wholesale_title">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wholesale — Lita's Jalapeño Poppers</title>
+<meta name="description" data-i18n-meta="wholesale_desc" content="Frozen jalapeño poppers by the pack, made in Belize. Order wholesale for pickup or delivery.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="lang-modal-overlay" data-lang-modal>
+  <div class="lang-modal-box">
+    <h2 data-i18n="lang_modal_heading">Choose your language</h2>
+    <p data-i18n="lang_modal_sub">You can change this anytime from the menu bar.</p>
+    <div class="lang-modal-choices">
+      <button type="button" data-lang-choose="en">English</button>
+      <button type="button" data-lang-choose="es">Español</button>
+    </div>
+  </div>
+</div>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.png" srcset="assets/logo.png 1x, assets/logo@2x.png 2x"
+           alt="Lita's Jalapeño Poppers" width="160" height="147">
+      <span class="brand-tagline" data-i18n="brand_tagline">Independence Village, Belize</span>
+    </a>
+    <button class="nav-toggle" data-nav-toggle aria-expanded="false" data-i18n-aria-label="nav_toggle_label" aria-label="Open menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="#2B1D14" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <ul class="nav-links" data-nav-links>
+      <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+      <li><a href="menu.html" data-i18n="nav_menu">Menu</a></li>
+      <li><a href="wholesale.html" aria-current="page" data-i18n="nav_wholesale">Wholesale</a></li>
+      <li><a href="about.html" data-i18n="nav_about">About Us</a></li>
+      <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+      <li class="nav-staff-mobile"><a href="staff/index.html" data-i18n="nav_staff">Staff Login</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="staff/index.html" class="staff-link staff-link-desktop" data-i18n="nav_staff">Staff Login</a>
+      <div class="lang-switch">
+        <button type="button" data-lang-option="en">EN</button>
+        <button type="button" data-lang-option="es">ES</button>
+      </div>
+      <button class="cart-btn" data-open-cart data-i18n-aria-label="cart_open_label" aria-label="Open cart">
+        <span data-i18n="cart_word">Cart</span> <span class="cart-count" data-cart-count>0</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="wrap">
+    <div class="made-badge" data-i18n="made_in_belize">Belizean Made Product</div>
+    <div class="eyebrow-note" data-i18n="wholesale_eyebrow">Packaging area · Prices in BZD</div>
+    <h1 data-i18n="wholesale_h1">Wholesale</h1>
+    <p data-i18n="wholesale_p">Frozen jalapeño poppers by the pack — 10, 20 or 50 per pack. Add what you need, then send your order on WhatsApp.</p>
+    <p class="hint-link"><span data-i18n="wholesale_restaurant_hint">Looking for food and drinks?</span> <a href="menu.html" data-i18n="wholesale_restaurant_link">See the restaurant menu</a></p>
+  </div>
+</header>
+
+<main class="menu-layout">
+  <div class="wrap">
+    <section class="info-panel" aria-labelledby="wh-info">
+      <h2 id="wh-info" data-i18n="wholesale_info_heading">Pickup &amp; delivery</h2>
+      <p><strong data-i18n="hours_packaging">Packaging area (Wholesale)</strong>: <span data-i18n="hours_mon_fri">Monday – Friday</span>, 8:00 AM – 5:00 PM</p>
+      <p data-i18n="wholesale_pickup">Pickup is available at our packaging area during its hours.</p>
+      <p data-i18n="wholesale_delivery_free">Delivery is free on Fridays to Belize, Cayo, Stann Creek and Toledo.</p>
+      <p data-i18n="wholesale_ids">Orders for Corozal and Orange Walk are delivered through IDS.</p>
+      <p data-i18n="wholesale_confirm">We'll confirm your delivery day and details with you on WhatsApp.</p>
+    </section>
+    <div data-menu-groups></div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <h3>Lita's Jalapeño Poppers</h3>
+      <p style="max-width:36ch;" data-i18n="footer_tagline">Homemade poppers, food, drinks and shakes in Independence Village, Belize.</p>
+      <p class="made-badge made-badge--footer" data-i18n="made_in_belize">Belizean Made Product</p>
+    </div>
+    <div>
+      <h3 data-i18n="footer_visit">Visit</h3>
+      <p data-i18n="footer_address">Independence Village, Belize</p>
+    </div>
+    <div>
+      <h3 data-i18n="footer_contact_heading">Get in touch</h3>
+      <p><a href="contact.html" data-i18n="footer_link_contact">Contact & hours</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="cart-overlay" data-cart-overlay></div>
+<aside class="cart-drawer" data-cart-drawer aria-label="Your order">
+  <div class="cart-head">
+    <h2 data-i18n="cart_drawer_heading_wholesale">Your wholesale order</h2>
+    <button class="close-cart" data-close-cart data-i18n-aria-label="cart_close_label" aria-label="Close cart">×</button>
+  </div>
+  <div class="cart-body" data-cart-body></div>
+  <div class="cart-foot">
+    <div class="cart-total-row"><span data-i18n="cart_total_label">Total</span><span data-cart-total>$0.00</span></div>
+    <label for="order-name" data-i18n="cart_name_label">Your name</label>
+    <input type="text" id="order-name" data-order-name data-i18n-placeholder="cart_name_placeholder" placeholder="e.g. Maria">
+    <label data-i18n="wh_fulfillment_label">Pickup or delivery?</label>
+    <div class="pickup-choice">
+      <label><input type="radio" name="fulfillment" value="pickup" checked> <span data-i18n="cart_pickup">Pickup</span></label>
+      <label><input type="radio" name="fulfillment" value="delivery"> <span data-i18n="cart_delivery">Delivery</span></label>
+    </div>
+    <div class="wh-delivery" data-wh-delivery-fields hidden>
+      <label for="wh-district" data-i18n="wh_district_label">District</label>
+      <select id="wh-district" data-wh-district>
+        <option value="" data-i18n="wh_district_choose">Choose your district</option>
+        <option value="belize" data-i18n="district_belize">Belize</option>
+        <option value="cayo" data-i18n="district_cayo">Cayo</option>
+        <option value="stann_creek" data-i18n="district_stann_creek">Stann Creek</option>
+        <option value="toledo" data-i18n="district_toledo">Toledo</option>
+        <option value="corozal" data-i18n="district_corozal">Corozal</option>
+        <option value="orange_walk" data-i18n="district_orange_walk">Orange Walk</option>
+      </select>
+      <p class="wh-error" data-wh-error role="alert" data-i18n="wh_district_required" hidden>Please choose your district for delivery.</p>
+    </div>
+    <label for="order-notes" data-i18n="cart_notes_label">Notes (optional)</label>
+    <textarea id="order-notes" data-order-notes rows="2" data-i18n-placeholder="cart_notes_wholesale_placeholder" placeholder="e.g. business name, delivery address"></textarea>
+    <p class="cart-stock-msg" data-cart-stock-msg role="alert" hidden></p>
+    <button class="btn btn-whatsapp order-btn" data-whatsapp-order data-i18n="cart_send_button">Send order on WhatsApp</button>
+  </div>
+</aside>
+
+<script>window.LITA_CONTEXT = "wholesale"; window.STOCK_POLL = true;</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="db.js"></script>
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+<script src="stock.js"></script>
+<script src="catalog.js"></script>
+<script>
+  const groupsEl = document.querySelector("[data-menu-groups]");
+  function renderMenu() { renderCatalog(groupsEl, PUBLIC_CATEGORIES.wholesale); }
+  renderMenu();
+</script>
+</body>
+</html>
