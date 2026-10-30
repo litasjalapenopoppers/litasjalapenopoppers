@@ -76,6 +76,7 @@ async function logOrderToDatabase(cartSnapshot, meta) {
       notes: meta.notes || null,
       language: meta.language || null,
       total: meta.total,
+       source: meta.source || "online",
     });
     if (orderError) throw orderError;
 
