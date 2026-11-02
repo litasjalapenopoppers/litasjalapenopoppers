@@ -1,0 +1,31 @@
+name: Keep database awake
+
+on:
+  schedule:
+    - cron: "17 14 */2 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ask the database if it is awake
+        run: |
+          URL=$(sed -n 's/^const SUPABASE_URL = "\([^"]*\)".*/\1/p' db.js)
+          KEY=$(sed -n 's/^const SUPABASE_ANON_KEY = "\([^"]*\)".*/\1/p' db.js)
+          case "$URL" in
+            https://*.supabase.co) ;;
+            *) echo "db.js does not have a real Supabase address yet."; exit 1 ;;
+          esac
+          case "$KEY" in
+            ""|*YOUR-*) echo "db.js does not have a real key yet."; exit 1 ;;
+          esac
+          RESPONSE=$(curl -sS --fail-with-body --max-time 30 -X POST "$URL/rest/v1/rpc/keep_alive" \
+            -H "apikey: $KEY" -H "Authorization: Bearer $KEY" \
+            -H "Content-Type: application/json" -d '{}')
+          echo "Database said: $RESPONSE"
+          echo "$RESPONSE" | grep -q '"ok"'
